@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="M8 International Protection - Professionelle Sicherheitslösungen, Schutz, Training und Beratung für Unternehmen und Privatkunden.">
+    <meta name="theme-color" content="#0f1419">
+    <meta property="og:title" content="M8 International Protection | Sicherheit auf höchstem Niveau">
+    <meta property="og:description" content="Professionelle Sicherheitslösungen auf höchstem Niveau">
+    
+    <title>M8 International Protection | Sicherheit auf höchstem Niveau</title>
+    
+    <style>
+        /* ==================== RESET & BASICS ==================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #f5f5f5;
+            background-color: #0f1419;
+        }
+
+        /* ==================== NAVIGATION ==================== */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(15, 20, 25, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #1e293b;
+            z-index: 50;
+            padding: 1rem 1.5rem;
+        }
+
+        .nav-container {
+            max-width: 80rem;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.125rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: #f5f5f5;
+        }
+
+        .logo::before {
+            content: "🛡️";
+            font-size: 1.75rem;
+        }
+
+        .nav-links {
+            display: none;
+            gap: 2rem;
+            align-items: center;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover {
+            color: #f5f5f5;
+        }
+
+        .nav-links .contact-btn {
+            padding: 0.5rem 1.25rem;
+            background-color: #475569;
+            color: #f5f5f5;
+            border-radius: 0.375rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-links .contact-btn:hover {
+            background-color: #334155;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: #cbd5e1;
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .nav-links {
+                display: flex;
+            }
+            .mobile-menu-btn {
+                display: none !important;
+            }
+        }
+
+        /* ==================== MOBILE MENU ==================== */
+        .mobile-nav {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background-color: #1a2332;
+            border-top: 1px solid #1e293b;
+            padding: 1rem;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .mobile-nav.active {
+            display: flex;
+        }
+
+        .mobile-nav a {
+            color: #cbd5e1;
+            text-decoration: none;
+            padding: 0.5rem 0;
+            transition: color 0.3s ease;
+        }
+
+        .mobile-nav a:hover {
+            color: #f5f5f5;
+        }
+
+        @media (max-width: 767px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+        }
+
+        /* ==================== HERO SECTION ==================== */
+        .hero {
+            position: relative;
+            height: 100vh;
+            background-color: #0f1419;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 60px;
+            text-align: center;
+            color: #f5f5f5;
+        }
+
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                repeating-linear-gradient(
+                    90deg,
+                    rgba(51, 65, 85, 0.1) 0px,
+                    rgba(51, 65, 85, 0.1) 1px,
+                    transparent 1px,
+                    transparent 100px
+                ),
+                repeating-linear-gradient(
+                    0deg,
+                    rgba(51, 65, 85, 0.1) 0px,
+                    rgba(51, 65, 85, 0.1) 1px,
+                    transparent 1px,
+                    transparent 100px
+                );
+            background-size: 100px 100px;
+            z-index: 1;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(15, 20, 25, 0.5), rgba(15, 20, 25, 0.7), rgba(15, 20, 25, 1));
+            z-index: 2;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            padding: 2rem;
+            max-width: 900px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 10vw, 3.5rem);
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+            margin-bottom: 1.5rem;
+            color: #f5f5f5;
+        }
+
+        .hero p {
+            font-size: clamp(1.125rem, 3vw, 1.25rem);
+            color: #cbd5e1;
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
+        }
+
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            background-color: #e2e8f0;
+            color: #0f1419;
+            text-decoration: none;
+            border-radius: 0.375rem;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .hero-cta:hover {
+            background-color: #f5f5f5;
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 4;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            50% {
+                transform: translateX(-50%) translateY(10px);
+            }
+        }
+
+        /* ==================== SECTIONS ==================== */
+        section {
+            padding: 5rem 1.5rem;
+            border-top: 1px solid #1e293b;
+        }
+
+        .section-container {
+            max-width: 80rem;
+            margin: 0 auto;
+        }
+
+        section h2 {
+            font-size: clamp(2rem, 8vw, 3.125rem);
+            font-weight: 700;
+            margin-bottom: 2.5rem;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+            color: #f5f5f5;
+        }
+
+        .section-label {
+            color: #7c8794;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .section-intro {
+            color: #cbd5e1;
+            font-size: 1.125rem;
+            max-width: 40rem;
+            margin-bottom: 3rem;
+            line-height: 1.7;
+        }
+
+        /* ==================== CARD GRID ==================== */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .service-card {
+            background-color: #1a2332;
+            border: 1px solid #334155;
+            border-radius: 0.5rem;
+            padding: 2rem;
+            transition: border-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .service-card:hover {
+            border-color: #475569;
+        }
+
+        .service-card-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin: 1rem 0;
+            color: #f5f5f5;
+        }
+
+        .service-card ul {
+            list-style: none;
+        }
+
+        .service-card li {
+            display: flex;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+            color: #cbd5e1;
+            font-size: 0.95rem;
+        }
+
+        .service-card li::before {
+            content: "●";
+            color: #7c8794;
+            font-weight: bold;
+            flex-shrink: 0;
+            margin-top: 0.25rem;
+        }
+
+        /* ==================== SECTIONS STYLING ==================== */
+        #protection {
+            background-color: #0f1419;
+        }
+
+        #training {
+            background-color: #0a0f14;
+        }
+
+        #consulting {
+            background-color: #0f1419;
+        }
+
+        #why-us {
+            background-color: #0a0f14;
+        }
+
+        .why-us-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .why-us-item {
+            text-align: center;
+        }
+
+        .why-us-item h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin: 1rem 0;
+            color: #f5f5f5;
+        }
+
+        .why-us-item p {
+            color: #cbd5e1;
+            line-height: 1.7;
+        }
+
+        .highlight-box {
+            background-color: #1a2332;
+            border: 1px solid #334155;
+            border-radius: 0.5rem;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        .highlight-box h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #f5f5f5;
+        }
+
+        .highlight-box-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .highlight-box-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            color: #cbd5e1;
+        }
+
+        .highlight-box-item::before {
+            content: "◆";
+            color: #7c8794;
+            font-size: 0.75rem;
+            margin-top: 0.375rem;
+            flex-shrink: 0;
+        }
+
+        /* ==================== CONTACT SECTION ==================== */
+        #contact {
+            background-color: #0f1419;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: #f5f5f5;
+            font-size: 0.95rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            padding: 0.75rem 1rem;
+            background-color: #1a2332;
+            border: 1px solid #334155;
+            border-radius: 0.375rem;
+            color: #f5f5f5;
+            font-family: inherit;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: #64748b;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #475569;
+        }
+
+        .submit-btn {
+            padding: 0.75rem 1.5rem;
+            background-color: #e2e8f0;
+            color: #0f1419;
+            border: none;
+            border-radius: 0.375rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .submit-btn:hover {
+            background-color: #f5f5f5;
+        }
+
+        .form-success {
+            padding: 1rem;
+            background-color: rgba(34, 197, 94, 0.1);
+            border: 1px solid #16a34a;
+            border-radius: 0.375rem;
+            color: #86efac;
+            font-size: 0.95rem;
+            display: none;
+        }
+
+        .form-success.show {
+            display: block;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .contact-item-icon {
+            font-size: 1.5rem;
+            color: #7c8794;
+            flex-shrink: 0;
+        }
+
+        .contact-item-content h4 {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+            color: #cbd5e1;
+        }
+
+        .contact-item-content p {
+            color: #64748b;
+            font-size: 0.95rem;
+        }
+
+        .emergency-box {
+            background-color: #1a2332;
+            border: 1px solid #334155;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+        }
+
+        .emergency-box h4 {
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: #f5f5f5;
+        }
+
+        .emergency-box p {
+            color: #64748b;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .emergency-number {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #cbd5e1;
+        }
+
+        /* ==================== FOOTER ==================== */
+        footer {
+            background-color: #0a0f14;
+            border-top: 1px solid #1e293b;
+            padding: 3rem 1.5rem;
+        }
+
+        .footer-container {
+            max-width: 80rem;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h4 {
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #f5f5f5;
+        }
+
+        .footer-section p {
+            color: #64748b;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .footer-section a {
+            color: #64748b;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: #cbd5e1;
+        }
+
+        .footer-divider {
+            border-top: 1px solid #1e293b;
+            padding-top: 2rem;
+        }
+
+        .footer-copyright {
+            color: #64748b;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        /* ==================== LEGAL SECTION ==================== */
+        #legal {
+            background-color: #0f1419;
+        }
+
+        .legal-content {
+            color: #64748b;
+        }
+
+        .legal-content h2 {
+            font-size: 1.875rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .legal-content p {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .legal-content ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .legal-content li {
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        /* ==================== RESPONSIVE ==================== */
+        @media (max-width: 768px) {
+            section {
+                padding: 3rem 1.5rem;
+            }
+
+            section h2 {
+                font-size: 1.875rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ==================== NAVIGATION ==================== -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">M8 PROTECTION</div>
+            <ul class="nav-links">
+                <li><a href="#protection">Protection</a></li>
+                <li><a href="#training">Training</a></li>
+                <li><a href="#consulting">Consulting</a></li>
+                <li><a href="#contact" class="contact-btn">Kontakt</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+        </div>
+        <div class="mobile-nav" id="mobileNav">
+            <a href="#protection">Protection</a>
+            <a href="#training">Training</a>
+            <a href="#consulting">Consulting</a>
+            <a href="#contact">Kontakt</a>
+        </div>
+    </nav>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero">
+        <div class="hero-background"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Security auf höchstem Niveau</h1>
+            <p>Schutz, Training und Beratung für Unternehmen und Privatkunden</p>
+            <a href="#contact" class="hero-cta">Kontakt aufnehmen ➜</a>
+        </div>
+        <div class="scroll-indicator">↓</div>
+    </section>
+
+    <!-- ==================== PROTECTION ==================== -->
+    <section id="protection">
+        <div class="section-container">
+            <span class="section-label">01 Protection</span>
+            <h2>Umfassender Schutz für Ihr Vermögen und Ihre Sicherheit</h2>
+            <p class="section-intro">
+                Von professionellem Objektschutz bis zu diskretem VIP-Schutz – wir bieten maßgeschneiderte Lösungen für Ihre individuellen Anforderungen.
+            </p>
+
+            <div class="card-grid">
+                <div class="service-card">
+                    <h3 class="service-card-title">🛡️ Objektschutz</h3>
+                    <ul>
+                        <li>Rund um die Uhr Überwachung</li>
+                        <li>Geschultes Sicherheitspersonal</li>
+                        <li>Zugangskontrolle und Patrouille</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <h3 class="service-card-title">👥 Personenschutz</h3>
+                    <ul>
+                        <li>Diskrete Begleitung</li>
+                        <li>Risikobewertung</li>
+                        <li>Professionelle Teams</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <h3 class="service-card-title">🎪 Veranstaltungsschutz</h3>
+                    <ul>
+                        <li>Event-Planung und Koordination</li>
+                        <li>Crowd Management</li>
+                        <li>Notfallmaßnahmen</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <h3 class="service-card-title">💼 Werttransport & VIP Überwachung</h3>
+                    <ul>
+                        <li>Sichere Transporte</li>
+                        <li>Remote Monitoring-Systeme</li>
+                        <li>24/7 Überwachung</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== TRAINING ==================== -->
+    <section id="training">
+        <div class="section-container">
+            <span class="section-label">02 Training</span>
+            <h2>Schulungen für professionelle Handlungssicherheit</h2>
+            <p class="section-intro">
+                Wir bereiten Ihre Teams auf kritische Situationen vor und stärken ihre Kompetenz durch praxisnahe Trainings.
+            </p>
+
+            <div class="card-grid">
+                <div class="service-card">
+                    <h3 class="service-card-title">📚 Kerntrainings</h3>
+                    <ul>
+                        <li>Aufzugswart Schulungen</li>
+                        <li>Bedrohungserkennung</li>
+                        <li>Früherkennung von Gefahrensituationen</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <h3 class="service-card-title">🎯 Spezialisierte Programme</h3>
+                    <ul>
+                        <li>Eskalation vermeiden</li>
+                        <li>Richtiges Verhalten in kritischen Situationen</li>
+                        <li>Brandschutz Training</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <h3>Handlungssicherheit im Fokus</h3>
+                <p>
+                    Unser Training zielt darauf ab, Ihre Mitarbeiter in Stress-Situationen sicher zu machen. Durch realistische Szenarien und bewährte Methoden entwickeln sie die nötige Sicherheit, um richtig zu handeln.
+                </p>
+                <div class="highlight-box-grid">
+                    <div class="highlight-box-item">Praxisnahe Szenariotrainings</div>
+                    <div class="highlight-box-item">Erfahrene Instruktoren</div>
+                    <div class="highlight-box-item">Zertifikate & Dokumentation</div>
+                    <div class="highlight-box-item">Regelmäßige Auffrischungen</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONSULTING ==================== -->
+    <section id="consulting">
+        <div class="section-container">
+            <span class="section-label">03 Consulting</span>
+            <h2>Strategische Sicherheitsberatung auf Expertenniveau</h2>
+            <p class="section-intro">
+                Wir analysieren Ihre Sicherheitslücken und entwickeln individuelle Konzepte für konstante Leistungsfähigkeit.
+            </p>
+
+            <div class="card-grid">
+                <div class="service-card">
+                    <h3 class="service-card-title">🔍 Sicherheitsanalyse</h3>
+                    <ul>
+                        <li>Abhörschutz und Geheimschutz</li>
+                        <li>Betriebsmittel Sicherheitsberatung</li>
+                        <li>Detaillierte Schwachstellenanalyse</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <h3 class="service-card-title">✅ Qualitätskontrolle</h3>
+                    <ul>
+                        <li>Regelmäßige Überprüfung von Standards</li>
+                        <li>Optimierung von Prozessen</li>
+                        <li>Sicherstellung konstanter Leistung</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== WHY US ==================== -->
+    <section id="why-us">
+        <div class="section-container">
+            <h2 style="text-align: center; margin-bottom: 3rem;">Warum M8 International Protection</h2>
+
+            <div class="why-us-grid">
+                <div class="why-us-item">
+                    <h3>💡 Erfahrung</h3>
+                    <p>
+                        Jahrzehnte an Expertise in Sicherheit, Schutz und professioneller Beratung für nationale und internationale Kunden.
+                    </p>
+                </div>
+
+                <div class="why-us-item">
+                    <h3>🔒 Diskretion</h3>
+                    <p>
+                        Absolute Vertraulichkeit und diskrete Arbeitsweise ist nicht verhandelbar. Ihre Privatsphäre ist unsere Priorität.
+                    </p>
+                </div>
+
+                <div class="why-us-item">
+                    <h3>✓ Zuverlässigkeit</h3>
+                    <p>
+                        Professionelle Teams, die 24/7 präsent sind und individuelle Sicherheitskonzepte umsetzen – immer.
+                    </p>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <h3>Unser Ansatz</h3>
+                <div class="highlight-box-grid">
+                    <div>
+                        <p>
+                            <strong>Individuelle Lösungen:</strong> Jeder Kunde ist einzigartig. Wir entwickeln maßgeschneiderte Sicherheitskonzepte, die genau zu Ihren Anforderungen passen.
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            <strong>Kontinuierliche Verbesserung:</strong> Sicherheit ist ein fortlaufender Prozess. Wir überprüfen, optimieren und passen regelmäßig an.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACT ==================== -->
+    <section id="contact">
+        <div class="section-container">
+            <h2 style="text-align: center;">Kontaktieren Sie uns</h2>
+            <p class="section-intro" style="text-align: center; max-width: 500px; margin-left: auto; margin-right: auto;">
+                Egal ob Anfrage, Beratung oder Notfall – wir sind für Sie erreichbar und ansprechbar.
+            </p>
+
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Ihr Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-Mail</label>
+                            <input type="email" id="email" name="email" placeholder="ihre@email.de" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Nachricht</label>
+                            <textarea id="message" name="message" placeholder="Ihre Nachricht..." rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Senden</button>
+                        <div class="form-success" id="formSuccess">
+                            ✓ Danke! Ihre Nachricht wurde versendet. Wir melden uns bald.
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <div>
+                        <h3 style="font-weight: 600; color: #f5f5f5; margin-bottom: 1rem;">Direkter Kontakt</h3>
+                        <div class="contact-item">
+                            <div class="contact-item-icon">📞</div>
+                            <div class="contact-item-content">
+                                <h4>Telefon (Platzhalter)</h4>
+                                <p>+43 (0) XXX XXX XXXX</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon">📧</div>
+                            <div class="contact-item-content">
+                                <h4>E-Mail (Platzhalter)</h4>
+                                <p>kontakt@m8protection.at</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="emergency-box">
+                        <h4>🚨 24/7 Notfall-Hotline</h4>
+                        <p>Im Notfall erreichen Sie uns rund um die Uhr unter unserer Notfall-Nummer.</p>
+                        <div class="emergency-number">+43 (0) EMERGENCY</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== LEGAL ==================== -->
+    <section id="legal">
+        <div class="section-container legal-content">
+            <h2>Impressum & Datenschutz</h2>
+            <p>
+                <strong>Placeholder – Impressum:</strong> Fügen Sie hier den vollständigen Impressum-Text ein, der folgende Punkte enthält:
+            </p>
+            <ul>
+                <li>Unternehmensname und Adresse</li>
+                <li>Geschäftsführer/Inhaber</li>
+                <li>Kontaktinformationen</li>
+                <li>Handelsregistereintrag</li>
+                <li>Umsatzsteuer-ID</li>
+                <li>Haftungsausschlüsse</li>
+            </ul>
+            <p>
+                <strong>Datenschutzerklärung:</strong> Diese sollte DSGVO-konform sein und Information zum Umgang mit Benutzerdaten enthalten.
+            </p>
+            <p>
+                <strong>Allgemeine Geschäftsbedingungen (AGB):</strong> Optional je nach Geschäftstätigkeit.
+            </p>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>🛡️ M8 PROTECTION</h4>
+                    <p>Professionelle Sicherheitslösungen für Unternehmen und Privatkunden.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#protection">Protection</a></li>
+                        <li><a href="#training">Training</a></li>
+                        <li><a href="#consulting">Consulting</a></li>
+                        <li><a href="#contact">Kontakt</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Rechtliches</h4>
+                    <ul>
+                        <li><a href="#legal">Impressum</a></li>
+                        <li><a href="#legal">Datenschutz</a></li>
+                        <li><a href="#legal">AGB</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Social Media</h4>
+                    <ul>
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-divider">
+                <p class="footer-copyright">
+                    © 2024 M8 International Protection. Alle Rechte vorbehalten.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== JAVASCRIPT ==================== -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileNav = document.getElementById('mobileNav');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileNav.classList.toggle('active');
+        });
+
+        // Close mobile menu when a link is clicked
+        mobileNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileNav.classList.remove('active');
+            });
+        });
+
+        // Contact Form Handling
+        const contactForm = document.getElementById('contactForm');
+        const formSuccess = document.getElementById('formSuccess');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Hier würde die echte API-Integration erfolgen
+            // Beispiel: fetch('/api/contact', { method: 'POST', body: new FormData(contactForm) })
+            
+            console.log('Form submitted with data:', {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                message: document.getElementById('message').value
+            });
+
+            // Zeige Erfolgsmeldung
+            formSuccess.classList.add('show');
+
+            // Leere das Formular
+            contactForm.reset();
+
+            // Verstecke die Erfolgsmeldung nach 3 Sekunden
+            setTimeout(() => {
+                formSuccess.classList.remove('show');
+            }, 3000);
+        });
+
+        // Parallax Effect für Hero Section (Optional - subtil halten)
+        const heroContent = document.querySelector('.hero-content');
+        const heroBackground = document.querySelector('.hero-background');
+
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+            if (heroContent) {
+                heroContent.style.transform = `translateY(${scrollY * 0.3}px)`;
+            }
+            if (heroBackground) {
+                heroBackground.style.transform = `translateY(${scrollY * 0.5}px)`;
+            }
+        });
+    </script>
+</body>
+</html>
